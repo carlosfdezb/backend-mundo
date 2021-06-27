@@ -11,11 +11,11 @@ class HomeController extends Controller
             'message' => 'Backend mundo',
             'author' => 'Carlos Fernández',
             'entries' => [
-                'getRegiones' => 'api/getRegiones',
+                'getRegiones' => 'api/getRegiones?api_key={API_KEY}',
                 'getProvincias' => 'api/getProvincias/{id_region}?api_key={API_KEY}',
                 'getCiudades' => 'api/getCiudades/{id_provincia}?api_key={API_KEY}',
                 'getCalles' => 'api/getCalles/{id_ciudad}?api_key={API_KEY}',
             ],
-        ], 201);
+        ], 200);
     }
 }

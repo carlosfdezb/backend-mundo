@@ -3,9 +3,9 @@
 ## Instrucciones de uso
 Para ejecutar la aplicación, después de descargar o clonar el repositorio, ejecute el siguiente comando dentro del directorio de la aplicación.
 ```
-php artisan install
+composer install
 ```
-**Antes del siguiente paso, tendrá que crear una nueva base de datos en `postgresql`**
+_*Antes del siguiente paso, tendrá que crear una nueva base de datos en `postgresql`*_
 
 También se requiere del archivo `.env`, que se encarga de la conexión a la base de datos, podrá obtener una referencia de `.env.example`, dónde tendrá que cambiar por sus datos correspondientes.
 `NOMBRE_DB`, `USERNAME` y `PASSWORD`.

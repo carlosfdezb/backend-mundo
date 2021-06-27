@@ -15,9 +15,4 @@ class Region extends Model
 
     protected $filleable = ['name'];
 
-
-    //Relaciones
-    public function provincias() {
-        return $this->hasMany(Provincias::class);
-    }
 }

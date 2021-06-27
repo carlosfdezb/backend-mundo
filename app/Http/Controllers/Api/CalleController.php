@@ -13,6 +13,6 @@ class CalleController extends Controller
         $calles = Calle::where('id_ciudad',$id_ciudad)->get();
         return response()->json([
             'response' => $calles,
-        ], 201);
+        ], 200);
     }
 }

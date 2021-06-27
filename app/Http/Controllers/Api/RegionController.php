@@ -13,6 +13,6 @@ class RegionController extends Controller
         $regions = Region::all();
         return response()->json([
             'response' => $regions,
-        ], 201);
+        ], 200);
     }
 }

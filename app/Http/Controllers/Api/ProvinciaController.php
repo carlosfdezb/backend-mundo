@@ -13,6 +13,6 @@ class ProvinciaController extends Controller
         $provincias = Provincia::where('id_region',$id_region)->get();
         return response()->json([
             'response' => $provincias,
-        ], 201);
+        ], 200);
     }
 }

@@ -13,6 +13,6 @@ class CiudadController extends Controller
         $ciudades = Ciudad::where('id_provincia',$id_provincia)->get();
         return response()->json([
             'response' => $ciudades,
-        ], 201);
+        ], 200);
     }
 }

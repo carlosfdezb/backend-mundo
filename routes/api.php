@@ -24,7 +24,6 @@ Route::group(["middleware" => ApiKeyValidate::class], function(){
     Route::get('getProvincias/{id_region}', [ProvinciaController::class,'getProvincias']);
     Route::get('getCiudades/{id_provincia}', [CiudadController::class,'getCiudades']);
     Route::get('getCalles/{id_ciudad}', [CalleController::class,'getCalles']);
-  
 });
 
 

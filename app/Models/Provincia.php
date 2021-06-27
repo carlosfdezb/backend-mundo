@@ -15,5 +15,4 @@ class Provincia extends Model
 
     protected $filleable = ['name','id_region'];
 
-    //Relaciones
 }
