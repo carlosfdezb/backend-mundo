@@ -1,7 +1,7 @@
 # Prueba técnica
 
 ## Instrucciones de uso
-Para ejecutar la aplicación, después de descargarlo o clonarlo, ejecute el siguiente comando dentro del directorio de la aplicación.
+Para ejecutar la aplicación, después de descargar o clonar el repositorio, ejecute el siguiente comando dentro del directorio de la aplicación.
 ```
 php artisan install
 ```
