@@ -11,6 +11,7 @@ También se requiere del archivo `.env`, que se encarga de la conexión a la bas
 `NOMBRE_DB`, `USERNAME` y `PASSWORD`.
 Quedando algo similar a esto
 ```
+//ejemplo
 DB_CONNECTION=pgsql
 DB_HOST=127.0.0.1
 DB_PORT=5432
