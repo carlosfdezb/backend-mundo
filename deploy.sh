@@ -108,7 +108,7 @@ END{
     print "APP_VERSION=" newv
   }
 }
-' .env.bak > .env
+' .env.backup > .env
 
 ok "APP_VERSION ahora es $NEW_VERSION"
 
