@@ -59,9 +59,19 @@ fi
 # 3) Preguntar tipo de deploy
 echo ""
 echo "¿Qué tipo de deploy quieres hacer?"
-echo "  1) PATCH -> ej. 0.0.1 => 0.0.2"
-echo "  2) MINOR -> ej. 0.0.20 => 0.1.0"
-echo "  3) MAJOR -> ej. 0.2.34 => 1.0.0"
+
+# Calcular versiones posibles
+PATCH_NEXT=$((PATCH + 1))
+MINOR_NEXT=$((MINOR + 1))
+MAJOR_NEXT=$((MAJOR + 1))
+
+PATCH_VERSION="${MAJOR}.${MINOR}.${PATCH_NEXT}"
+MINOR_VERSION="${MAJOR}.${MINOR_NEXT}.0"
+MAJOR_VERSION="${MAJOR_NEXT}.0.0"
+
+echo "  1) PATCH  => ${APP_VERSION} -> ${PATCH_VERSION}"
+echo "  2) MINOR  => ${APP_VERSION} -> ${MINOR_VERSION}"
+echo "  3) MAJOR  => ${APP_VERSION} -> ${MAJOR_VERSION}"
 read -rp "Elige 1/2/3: " choice
 
 case "$choice" in
