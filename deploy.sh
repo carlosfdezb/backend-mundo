@@ -89,7 +89,7 @@ NEW_VERSION="${NEW_MAJOR}.${NEW_MINOR}.${NEW_PATCH}"
 
 # 4) Actualizar APP_VERSION en .env (respetando portabilidad sed/awk)
 info "Actualizando .env: APP_VERSION=$APP_VERSION -> $NEW_VERSION"
-cp .env .env.bak
+cp .env .env.backup
 
 # Reemplazo seguro con awk (evita sed -i diferencias entre GNU/BSD)
 awk -v newv="$NEW_VERSION" '
@@ -121,8 +121,3 @@ git pull --rebase || {
 }
 
 ok "Listo. Respaldo: $BACKUP_BRANCH | Versión actualizada: $NEW_VERSION | Pull completado en $CURRENT_BRANCH"
-
-echo ""
-echo "Sugerencias:"
-echo " - Considera commitear el cambio de versión: git add .env && git commit -m \"chore: bump APP_VERSION to $NEW_VERSION\""
-echo " - Si vas a taggear: git tag -a v$NEW_VERSION -m \"Release $NEW_VERSION\" && git push --tags"
